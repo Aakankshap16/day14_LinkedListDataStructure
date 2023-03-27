@@ -27,7 +27,7 @@ namespace LinkedListProgram
                 temp.Next = node;
                          
             }
-            Console.WriteLine($"{node.Data} inserted into linked list ");
+          
         }
 
         public void Display()
@@ -40,7 +40,7 @@ namespace LinkedListProgram
             }
             while (temp  != null)
             {
-                Console.WriteLine(temp.Data+" ");
+                Console.Write(temp.Data+" ");
                 temp = temp.Next;
             }
 
