@@ -6,39 +6,41 @@
 
         public void Add(int Data)
         {
-          Node node = new Node(Data);
-        if (this.head == null)
-        {
-            this.head = node;
-        }
-        else
-        {
-            Node temp = head;
-            while (temp.Next != null)
+            Node node = new Node(Data);
+            if (this.head == null)
             {
+                this.head = node;
+            }
+            else
+            {
+                Node temp = head;
+                while (temp.Next != null)
+                {
+                    temp = temp.Next;
+                }
+                temp.Next = node;
+            }
+            Console.WriteLine("{0} inserted into Linked List", node.Data);
+        }
+
+        public void Display()
+        {
+            Node temp = this.head;
+            if (temp == null)
+            {
+                Console.WriteLine("Linked List is empty");
+                return;
+            }
+            while (temp != null)
+            {
+                Console.WriteLine(temp.Data + " ");
                 temp = temp.Next;
             }
-            temp.Next = node;
         }
-        Console.WriteLine("{0} inserted into Linked List", node.Data);
-    }
 
-    public void Display()
-    {
-        Node temp = this.head;
-        if (temp == null)
-        {
-            Console.WriteLine("Linked List is empty");
-            return;
-        }
-        while (temp != null)
-        {
-            Console.WriteLine(temp.Data + " ");
-            temp = temp.Next;
-        }
-    }
-    internal Node Insertion(int position, int Data)
-    {
+        /*
+        public Node Insertion(int position, int Data)
+      {
         if (position < 1)
             Console.WriteLine("Invalid position");
         if (position == 1)
@@ -64,7 +66,20 @@
                 Console.WriteLine("Position out of range");
         }
         return head;
+       }
+        */
+
+        //Delete node
+        public Node Delete()
+        {
+            if (this.head == null)
+            {
+                return null;
+            }
+            this.head = this.head.Next;
+            return this.head;
+        }
+
     }
-}
 
 }
