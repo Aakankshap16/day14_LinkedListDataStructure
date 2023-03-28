@@ -10,17 +10,22 @@
                 LinkedList list = new LinkedList();
                 list.Add(56);
                 Console.WriteLine("Node with data 56 is First Created");
-                Console.WriteLine(" ");
-                list.Add(70);
+                 Console.WriteLine(" ");
+                 list.Add(30);
                 Console.WriteLine("Next Append 70 to 56");
                 Console.WriteLine(" ");
-            list.Insertion(2, 30);
-            Console.WriteLine("Finally insert 30 in between 56 and 70:");
+                list.Add(70);
+                Console.WriteLine("Finally Append 70 to 30");
                 Console.WriteLine(" ");
                 Console.WriteLine("LinkedList Sequence:");
                 list.Display();
-           
-            }
+                 
+                list.Delete();
+            Console.WriteLine("After delete first element ");
+            Console.WriteLine("LinkedList Sequence:");
+            list.Display();
+
+        }
         
     }
 }
