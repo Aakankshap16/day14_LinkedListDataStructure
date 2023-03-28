@@ -39,6 +39,7 @@
         }
 
         /*
+         //Insertion
         public Node Insertion(int position, int Data)
       {
         if (position < 1)
@@ -69,8 +70,9 @@
        }
         */
 
-        //Delete node
-        public Node Delete()
+        /*
+        //Delete First element
+        public Node DeleteFirst()
         {
             if (this.head == null)
             {
@@ -78,6 +80,28 @@
             }
             this.head = this.head.Next;
             return this.head;
+        }
+        */
+
+        public Node DeleteLast()
+        {
+            if(this.head == null)
+            {
+                return null;
+            }
+
+            if(head.Next == null)
+            {
+                return null;
+            }
+            Node newNode = head;
+            while (newNode.Next.Next != null) 
+            {
+                newNode = newNode.Next;
+            }
+
+            newNode.Next= null;
+            return head;
         }
 
     }
