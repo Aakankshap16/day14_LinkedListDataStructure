@@ -20,9 +20,11 @@
             Console.WriteLine("LinkedList Sequence:");
             list.Display();
 
-            list.SearchNode(30);
-            
-
+            list.InsertionAnyWhere(8, 40);
+            Console.WriteLine("Finally insert 40");
+            Console.WriteLine(" ");
+            Console.WriteLine("LinkedList Sequence:");
+            list.Display();
         }
 
     }
