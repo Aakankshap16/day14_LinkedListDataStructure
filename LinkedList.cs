@@ -81,7 +81,7 @@
             this.head = this.head.Next;
             return this.head;
         }
-       
+       //DELETE LAST NODE 
         public Node DeleteLast()
         {
             if(this.head == null)
@@ -103,7 +103,7 @@
             return head;
         }
        
-
+        //SEARCH ELEMENT IN NODE
         public void SearchNode(int data)
         {
             int p = 0;
@@ -121,10 +121,11 @@
             }
 
         }
-
+        //INSERTION ANY WHERE
         public void InsertionAnyWhere(int position, int Data)
         {
             Node node = new Node(Data);
+            int count = 0;
 
             if (position < 1)
                 Console.WriteLine("Invalid position");
@@ -133,12 +134,14 @@
                 node.Next = head;
                 head = node;
                 return;
+                
             }
+            
             else 
             {
                 Node temp1 = null;
                 Node temp = head;
-                int count = 0;
+                
                 while (temp != null && count < position)
                 {
                     temp1 = temp;
@@ -147,11 +150,45 @@
                 }
                 node.Next = temp1.Next;
                 temp1.Next = node;
-
+                
             }
 
 
         }
+
+        //REMOVE ANY VALUE OF NODE
+        public void Delete(int value)
+        {
+            Node temp = this.head;
+            Node temp1 = null;
+
+            if (temp != null && temp.Data == value) // if head value delete
+            {
+                this.head = temp.Next;
+                Console.WriteLine("{0} deleted from Linked List", value);
+                return;
+            }
+
+            // Search for the key to be deleted, keep track of the
+            // previous node as we need to change 'prev->Next'
+            while (temp != null && temp.Data != value)
+            {
+                temp1 = temp;
+                temp = temp.Next;
+            }
+
+            if (temp == null)
+            {
+                Console.WriteLine(" Linked List is empty ");
+                return;
+            }
+
+           //for deletion
+            temp1.Next = temp.Next;
+
+            Console.WriteLine("{0} deleted from Linked List", value);
+        }
+
 
     }
 }
