@@ -21,11 +21,11 @@
             list.InsertionAnyWhere(2, 40);
             Console.WriteLine("Finally insert 40");
             Console.WriteLine(" ");
+            
             Console.WriteLine("LinkedList Sequence:");
             list.Display();
-            list.Delete(30);
             Console.WriteLine(" ");
-            Console.WriteLine("LinkedList Sequence after deletion:");
+            list.sort();
             list.Display();
 
         }
