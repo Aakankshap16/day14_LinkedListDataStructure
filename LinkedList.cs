@@ -38,7 +38,7 @@
             }
         }
 
-        /*
+       
          //Insertion
         public Node Insertion(int position, int Data)
       {
@@ -68,9 +68,9 @@
         }
         return head;
        }
-        */
+       
 
-        /*
+        
         //Delete First element
         public Node DeleteFirst()
         {
@@ -81,8 +81,7 @@
             this.head = this.head.Next;
             return this.head;
         }
-        */
-        /*
+       
         public Node DeleteLast()
         {
             if(this.head == null)
@@ -103,7 +102,7 @@
             newNode.Next= null;
             return head;
         }
-        */
+       
 
         public void SearchNode(int data)
         {
@@ -120,6 +119,37 @@
                 temp = temp.Next;
                 p++;
             }
+
+        }
+
+        public void InsertionAnyWhere(int position, int Data)
+        {
+            Node node = new Node(Data);
+
+            if (position < 1)
+                Console.WriteLine("Invalid position");
+            if (position == 1)
+            {
+                node.Next = head;
+                head = node;
+                return;
+            }
+            else 
+            {
+                Node temp1 = null;
+                Node temp = head;
+                int count = 0;
+                while (temp != null && count < position)
+                {
+                    temp1 = temp;
+                    temp = temp.Next;
+                    count++;
+                }
+                node.Next = temp1.Next;
+                temp1.Next = node;
+
+            }
+
 
         }
 
