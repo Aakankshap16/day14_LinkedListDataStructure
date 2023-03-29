@@ -17,14 +17,17 @@
             list.Add(70);
             Console.WriteLine("Finally Append 70 to 30");
             Console.WriteLine(" ");
-            Console.WriteLine("LinkedList Sequence:");
-            list.Display();
-
-            list.InsertionAnyWhere(8, 40);
+            
+            list.InsertionAnyWhere(2, 40);
             Console.WriteLine("Finally insert 40");
             Console.WriteLine(" ");
             Console.WriteLine("LinkedList Sequence:");
             list.Display();
+            list.Delete(30);
+            Console.WriteLine(" ");
+            Console.WriteLine("LinkedList Sequence after deletion:");
+            list.Display();
+
         }
 
     }
