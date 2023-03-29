@@ -26,6 +26,7 @@
         public void Display()
         {
             Node temp = this.head;
+            int count=0;
             if (temp == null)
             {
                 Console.WriteLine("Linked List is empty");
@@ -35,7 +36,9 @@
             {
                 Console.WriteLine(temp.Data + " ");
                 temp = temp.Next;
+                count++;
             }
+            Console.WriteLine("Size of Linked List is " + count);
         }
 
        
