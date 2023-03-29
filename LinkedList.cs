@@ -192,6 +192,28 @@
             Console.WriteLine("{0} deleted from Linked List", value);
         }
 
-
+        //sorting
+        public void sort()
+        {
+            Node temp = this.head;
+            Node next = null;
+            int node = 0;
+            while (temp != null)
+            {
+                next = temp.Next;
+                while (next != null)
+                {
+                    if (temp.Data > next.Data)
+                    {
+                        node = next.Data;
+                        next.Data = temp.Data;
+                        temp.Data = node;
+                    }
+                    next = next.Next;
+                }
+                temp = temp.Next;
+            }
+            Console.WriteLine("Sorted list is:");
+        }
     }
 }
