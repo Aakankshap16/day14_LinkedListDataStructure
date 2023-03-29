@@ -20,10 +20,8 @@
             Console.WriteLine("LinkedList Sequence:");
             list.Display();
 
-            list.DeleteLast();
-            Console.WriteLine("After delete Last element ");
-            Console.WriteLine("LinkedList Sequence:");
-            list.Display();
+            list.SearchNode(30);
+            
 
         }
 
