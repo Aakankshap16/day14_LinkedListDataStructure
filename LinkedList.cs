@@ -82,7 +82,7 @@
             return this.head;
         }
         */
-
+        /*
         public Node DeleteLast()
         {
             if(this.head == null)
@@ -103,7 +103,25 @@
             newNode.Next= null;
             return head;
         }
+        */
+
+        public void SearchNode(int data)
+        {
+            int p = 0;
+            Node temp = this.head;
+            while (temp != null)
+            {
+
+                if (temp.Data.Equals(data))
+                {
+                    Console.WriteLine("The Node " + data + " Present in Position :" + p);
+
+                }
+                temp = temp.Next;
+                p++;
+            }
+
+        }
 
     }
-
 }
